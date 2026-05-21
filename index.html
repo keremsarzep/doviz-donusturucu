@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anlık Döviz Dönüştürücü</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="converter-box">
+        <h2>Döviz Dönüştürücü</h2>
+        
+        <div class="input-group">
+            <label>Miktar:</label>
+            <input type="number" id="amount" value="1" min="1">
+        </div>
+
+        <div class="selection-group">
+            <div class="select-box">
+                <label>Kaynak:</label>
+                <select id="from-currency">
+                    <option value="USD" selected>USD - ABD Doları</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - İngiliz Sterlini</option>
+                    <option value="TRY">TRY - Türk Lirası</option>
+                </select>
+            </div>
+
+            <div class="select-box">
+                <label>Hedef:</label>
+                <select id="to-currency">
+                    <option value="TRY" selected>TRY - Türk Lirası</option>
+                    <option value="USD">USD - ABD Doları</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - İngiliz Sterlini</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="convert-btn">Dönüştür</button>
+
+        <div class="result-box">
+            <p id="result">Hesaplanıyor...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
