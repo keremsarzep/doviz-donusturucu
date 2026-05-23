@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anlık Döviz Dönüştürücü</title>
+    <title>Döviz Dönüştürücü</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,32 +15,32 @@
             <input type="number" id="amount" value="1" min="1">
         </div>
 
-        <div class="selection-group">
+        <div class="currency-group">
             <div class="select-box">
                 <label>Kaynak:</label>
                 <select id="from-currency">
-                    <option value="USD" selected>USD - ABD Doları</option>
+                    <option value="USD">USD - Dolar</option>
                     <option value="EUR">EUR - Euro</option>
-                    <option value="GBP">GBP - İngiliz Sterlini</option>
+                    <option value="GBP" selected>GBP - Sterlin</option>
                     <option value="TRY">TRY - Türk Lirası</option>
                 </select>
             </div>
 
+            <button id="swap-btn" onclick="swapCurrencies()">⇄</button>
+
             <div class="select-box">
                 <label>Hedef:</label>
                 <select id="to-currency">
-                    <option value="TRY" selected>TRY - Türk Lirası</option>
-                    <option value="USD">USD - ABD Doları</option>
+                    <option value="USD">USD - Dolar</option>
                     <option value="EUR">EUR - Euro</option>
-                    <option value="GBP">GBP - İngiliz Sterlini</option>
+                    <option value="GBP">GBP - Sterlin</option>
+                    <option value="TRY" selected>TRY - Türk Lirası</option>
                 </select>
             </div>
         </div>
 
-        <button id="convert-btn">Dönüştür</button>
-
         <div class="result-box">
-            <p id="result">Hesaplanıyor...</p>
+            <span id="result-text">Yükleniyor...</span>
         </div>
     </div>
 
